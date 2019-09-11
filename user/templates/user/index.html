@@ -1,0 +1,22 @@
+{% extends "user/base.html" %}
+
+{% block title_block %}
+  Home
+{% endblock %}
+
+{% block username_block %}
+  {% if user.is_authenticated  %}
+    {{user.first_name}}
+  {% else %}
+    Django Profile
+  {% endif %}
+{% endblock %}
+
+{% block body_block %}
+  <div class="jumbotron">
+    <h1 class="display-3">Home Page</h1>
+    <h3>This is a user registration project</h3>
+
+  </div>
+
+{% endblock %}
